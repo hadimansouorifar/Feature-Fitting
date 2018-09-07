@@ -8,5 +8,5 @@ from FFitting import *
 
 predicted = binary_classification(trainx, trainy, testx, testy, degree, value1, value2)
 
-# where predicted is list of labels of test data returned from function
-# based on them you can judge the accuracy in K-fold cross validation
+where predicted is list of labels of test data returned from function
+ based on them you can judge the accuracy in K-fold cross validation
