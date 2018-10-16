@@ -2,11 +2,11 @@
 # import it as follows:
 
 
-from FFitting import *
+from LP import *
 
 # you can call the classifier like this:
 
-predicted = binary_classification(trainx, trainy, testx, testy, degree, value1, value2)
+predicted = lp(trainx,trainy,testx,testy,p1,p2,dlb,dub,ite,threshold)
 
 where predicted is list of labels of test data returned from function
  based on them you can judge the accuracy in K-fold cross validation
