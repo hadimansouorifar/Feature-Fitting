@@ -30,7 +30,7 @@ for train, test in kf.split(x):
     trainy = y[train]
     testy = y[test]
 
-    y_pred = lp(trainx, trainy, testx, testy, -2, 3, 4, 4, 2, 0.5)
+    y_pred = lp(trainx, trainy, testx, testy, -2.2, 3, 4, 4, 2, 0.5)
     c = 0
     tp = 0
     tn = 0
@@ -40,13 +40,13 @@ for train, test in kf.split(x):
 
         if (y_pred[i] == testy[i]):
             c = c + 1
-            if (testy[i] == '2'):
+            if (testy[i] == '4'):
                 tp = tp + 1
             else:
                 tn = tn + 1
-        elif (testy[i] == '4'):
-            fp = fp + 1
         elif (testy[i] == '2'):
+            fp = fp + 1
+        elif (testy[i] == '4'):
             fn = fn + 1
 
     tpr = tp / (tp + fn)
